@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <script>
+
+        //1
+        var tC = +prompt("Введите температуру по C: ");
+        var tF = (9 / 5) * tC + 32;
+        alert("Температура по F: " + tF);
+
+        //2
+        var a = 7, b = 4;
+        alert("a: " + a + " b: " + b);
+        a = a + b;
+        b = b - a;
+        b = -b;
+        a = a - b;
+
+        alert("a: " + a + " b: " + b);
+
+        //3
+        var name = "Василий";
+        var admin = name;
+        alert(admin);
+
+        //4
+        var a = 1000 + "108";
+        alert(a);
+        //Результатом данного выражения будет: 1000108. Так как число 108 является строчным, а оператор + помимо сложения, также является конкатенация,
+        //который имеет больший преоритет, чем сложение.
+    </script>
+</body>
+
+</html>
