@@ -1,0 +1,110 @@
+<script>
+    //1
+    /* var a = 1, b = 1, c, d;
+     c = ++a; alert(c);           // 2  так как вначале выполняется суммирование, а потом вывод переменной
+     d = b++; alert(d);           // 1  так как вначале выполняется вывод переменной, а потом суммирование
+     c = (2 + ++a); alert(c);      // 5  так как переменная a равна 2-м и выполняется суммирование, а потом вывод переменной
+     d = (2 + b++); alert(d);      // 4  так как переменная b равна 2-м и выполняется вывод переменной, а потом вывод суммирование
+     alert(a);                    // 3 из-за предыдущих суммирований переменная равна 3
+     alert(b); */                  // 3 из-за предыдущих суммирований переменная равна 3
+
+    //2
+    var a = 2;
+    var x = 1 + (a *= 2);
+    // х будет равен 5
+
+    //3
+    var a = 4, b = 2, result;
+    if (a > 0 && b > 0) {
+        result = a / b;
+        alert(result);
+    } else if (a < 0 && b < 0) {
+        result = a * b;
+        alert(result);
+    } else if (a != b) {
+        result = a + b;
+        alert(result);
+    } else {
+        alert("Error");
+    }
+
+    //4
+    var a = (Math.random() * (15 - 0) + 0).toFixed(0);
+    rec(a);
+
+    switch (a) {
+        case 1: console.log("1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 2: console.log("2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 3: console.log("3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 4: console.log("4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 5: console.log("5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 6: console.log("6, 7, 8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 7: console.log("7, 8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 8: console.log("8, 9, 10, 11, 12, 13, 14, 15"); break;
+        case 9: console.log("9, 10, 11, 12, 13, 14, 15"); break;
+        case 10: console.log("10, 11, 12, 13, 14, 15"); break;
+        case 11: console.log("11, 12, 13, 14, 15"); break;
+        case 12: console.log("12, 13, 14, 15"); break;
+        case 13: console.log("13, 14, 15"); break;
+        case 14: console.log("14, 15"); break;
+        case 15: console.log("15"); break;
+    }
+
+    function rec(a) {
+        if (a < 15) {
+            console.log(a);
+            a++;
+            rec(a);
+        } else {
+            console.log(a);
+        }
+    }
+
+    //5
+    function sum(arg1, arg2) {
+        return arg1 + arg2;
+    }
+    function diff(arg1, arg2) {
+        return arg1 - arg2;
+    }
+    function divn(arg1, arg2) {
+        return arg1 / arg2;
+    }
+    function multi(arg1, arg2) {
+        return arg1 * arg2;
+    }
+
+    //6
+    mathOperation(4, 3, "+");
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "+": alert(sum(arg1, arg2)); break;
+            case "-": alert(diff(arg1, arg2)); break;
+            case "/": alert(divn(arg1, arg2)); break;
+            case "*": alert(multi(arg1, arg2)); break;
+        }
+    }
+
+    //7
+    if (NULL == 0) {
+        alert("1");
+    } else if (NULL > 0) { // NULL является больше 0, но я так и не понял в чем их отличия,кроме этого( 
+        alert("2");
+    } else if (NULL < 0) {
+        alert("3");
+    } else
+        alert("4");
+
+    //8
+    power(2, 3);
+
+    function power(val, pow) {
+        var c = 1;
+        if (c != pow) {
+            val *= val;
+            c++;
+            power(val, pow);
+        } else
+            alert(val);
+    }
+</script>
