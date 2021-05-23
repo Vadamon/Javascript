@@ -1,0 +1,29 @@
+<script>
+    var object = {
+        number: 0,
+        units: 0,
+        tens: 0,
+        hundreds: 0,
+    };
+
+    var number = +prompt("Введите число до 999: ");
+    object.number = number;
+
+    searchNumbers(number);
+
+    function searchNumbers(number) {
+        if (number <= 9) {
+            object.units = number;
+        }
+        else if (number <= 999) {
+            object.units = Math.floor(number % 10);
+            object.tens = Math.floor(number / 10 % 10);
+            object.hundreds = Math.floor(number / 100 % 10);
+        } else {
+            console.log("Вы ввели число за диапозоном 999 или ввели не число!");
+        }
+
+    }
+
+    console.log(object);
+</script>
