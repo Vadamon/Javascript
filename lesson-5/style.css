@@ -1,0 +1,43 @@
+.letters {
+    background-color: none;
+    background: none;
+    border: none;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.numbers {
+    text-align: center;
+    font-size: 20px;
+}
+
+.letters-top {
+    transform: rotate(180deg);
+    font-size: 20px;
+}
+
+.numbers-right {
+    transform: rotate(180deg);
+    font-size: 20px;
+}
+
+.td{
+    width: 50px;
+    height: 50px;
+}
+table{
+    background: #B98E6C;
+    border: 5px solid #583426;
+    margin: 50px auto;
+}
+
+.figs-top{
+    font-size: 40px;
+}
+
+.figs-bottom{
+    font-size: 40px;
+    color: white;
+}
