@@ -1,0 +1,40 @@
+.slider{
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.slider span{
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 10px);
+    transition-duration: 500ms;
+    font-size: 1.5em;
+}
+.slider span:hover{
+    cursor: pointer;
+    color: #888888;
+    transform: translateX(-2px);
+}
+.slider span:first-child{
+    left: 30%;
+    z-index: 1;
+}
+.slider span:first-child:hover{
+    transform: translateX(+2px);
+}
+.slider span:last-child{
+    right: 30%;
+}
+.slider_img{
+    opacity: 0;
+    max-height: 350px;
+    max-width: 30%;
+}
+.slider_img__active{
+    position: absolute;
+    left: calc(50% - 130px);
+    opacity: 1;
+    transition-duration: 600ms;
+    transform: translateX(-15%);
+    width: 30%;;
+}
